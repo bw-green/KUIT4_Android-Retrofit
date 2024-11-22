@@ -64,5 +64,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_main_popular_menu"
         tools:listitem="@layout/item_popular_menu" />
+<!--    개발편의를 위한 아이템 미리보기 기능-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

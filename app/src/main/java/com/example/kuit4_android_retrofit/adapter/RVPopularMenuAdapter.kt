@@ -1,35 +1,38 @@
+package com.example.kuit4_android_retrofit.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kuit4_android_retrofit.data.CategoryData
+import com.bumptech.glide.Glide
+import com.example.kuit4_android_retrofit.data.MenuData
 import com.example.kuit4_android_retrofit.databinding.ItemCategoryBinding
+import com.example.kuit4_android_retrofit.databinding.ItemPopularMenuBinding
 
 class RVPopularMenuAdapter(
-    private val menuList: List<CategoryData>,
+    private val context: Context,
+    private val menuList: List<MenuData>
 ) : RecyclerView.Adapter<RVPopularMenuAdapter.ViewHolder>() {
     inner class ViewHolder(
-        private val binding: ItemCategoryBinding,
+        private val binding: ItemPopularMenuBinding
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: CategoryData) {
-            binding.sivCategoryImg.setImageResource(item.categoryImg)
-            binding.tvCategoryName.text = item.categoryName
+        fun bind(item: MenuData) {
+            Glide.with(context).load(item.menuImg)
+                .into(binding.ivPopularMenuImg)
+            binding.tvPopularMenuName.text = item.menuName
+            binding.tvPopularMenuRate.text = item.menuRate.toString()
+            binding.tvPopularMenuTime.text = item.menuTime.toString()
+
         }
     }
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int,
-    ): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
-            ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemPopularMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(
-        holder: ViewHolder,
-        position: Int,
-    ) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(menuList[position])
     }
 
