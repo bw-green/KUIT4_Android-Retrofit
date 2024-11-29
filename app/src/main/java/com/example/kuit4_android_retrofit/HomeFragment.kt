@@ -324,7 +324,7 @@ class HomeFragment : Fragment() {
                         val menuDataResponse = response.body()
                         // 데이터가 성공적으로 받아와졌을 때
                         if (!menuDataResponse.isNullOrEmpty()) {
-                            //데이터 넣기\
+
                             Log.d("df",menuDataResponse.toString())
                             initMenuRV(menuDataResponse)
 
@@ -336,7 +336,7 @@ class HomeFragment : Fragment() {
                     }
                 }
 
-                override fun onFailure(call: Call<List<MenuData>>, t: Throwable) {
+                override fun onFailure(call : Call<List<MenuData>>, t: Throwable) {
                     Log.d("menuCritical", "menuCritical")
                 }
 
