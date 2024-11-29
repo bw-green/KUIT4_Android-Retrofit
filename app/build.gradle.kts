@@ -13,12 +13,12 @@ properties.load(propertiesFile.inputStream())
 
 android {
     namespace = "com.example.kuit4_android_retrofit"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.kuit4_android_retrofit"
         minSdk = 29
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -68,11 +68,12 @@ dependencies {
     kapt("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
 
-    val retrofit_version = "2.6.1"
+    val retrofit_version = "2.9.0"
 // Retrofit 라이브러리
     implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
 // Gson Converter 라이브러리
     implementation("com.squareup.retrofit2:converter-gson:$retrofit_version")
 // Scalars Converter 라이브러리
     implementation("com.squareup.retrofit2:converter-scalars:$retrofit_version")
+
 }
