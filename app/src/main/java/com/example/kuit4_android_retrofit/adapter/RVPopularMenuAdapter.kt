@@ -18,7 +18,6 @@ import retrofit2.Response
 class RVPopularMenuAdapter(
     private val context: Context
 ) : ListAdapter<MenuData, RVPopularMenuAdapter.ViewHolder>(DiffCallback) {
-
     inner class ViewHolder(
         private val binding: ItemPopularMenuBinding
     ) : androidx.recyclerview.widget.RecyclerView.ViewHolder(binding.root) {
