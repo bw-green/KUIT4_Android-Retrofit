@@ -5,16 +5,30 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-            android:id="@+id/tv_bsl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="시트시트"/>
+    <ImageView
+            android:id="@+id/iv_bsl"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_nav_favorite"
+        />
+
+    <EditText
+        android:id="@+id/et_bsl_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="정보 입력"
+        android:inputType="text"
+        />
+    <Button
+        android:id="@+id/btn_bsl_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="수정"/>
 
     <Button
-            android:id="@+id/btn_bsl"
+            android:id="@+id/btn_bsl_delete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Click Me"/>
+            android:text="삭제"/>
 
 </LinearLayout>

@@ -7,14 +7,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.kuit4_android_retrofit.data.CategoryData
 import com.example.kuit4_android_retrofit.data.MenuData
-import com.example.kuit4_android_retrofit.databinding.BottomSheetLayoutBinding
 import com.example.kuit4_android_retrofit.databinding.DialogAddCategoryBinding
 import com.example.kuit4_android_retrofit.databinding.DialogAddMenuBinding
 import com.example.kuit4_android_retrofit.databinding.FragmentHomeBinding
@@ -22,7 +20,6 @@ import com.example.kuit4_android_retrofit.databinding.ItemCategoryBinding
 import com.example.kuit4_android_retrofit.retrofit.RetrofitObject
 import com.example.kuit4_android_retrofit.retrofit.service.CategoryService
 import com.example.kuit4_android_retrofit.retrofit.service.PopularService
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import retrofit2.Call
 import retrofit2.Response
 
